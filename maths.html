@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="maths.css">
+  <title>Countdown Timer</title>
+    <style>
+      
+        body {
+            background: linear-gradient(to right, #10156d, #689bd2); /* Customize the colors */
+            height: 100vh; /* Make it full-screen */
+            margin: 0; /* Remove default body margin */
+            display: flex; /* Optional: Center content */
+            justify-content: center; /* Optional: Center content horizontally */
+            /*align-items: center; /* Optional: Center content vertically */
+            font-family: Arial, sans-serif;
+            color: white;
+            /* text-align: center; */
+        }
+
+
+        .mathscountdown {
+            font-size: 2rem;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px 40px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: 40%; /* Vertically align */
+            left: 20px; /* Position on the left-hand side */
+            transform: translateY(-50%); /* Adjust for vertical centering */
+        }
+
+
+
+      
+    </style>
+
+
+<!-- <div class="container">
+  <div class="palette">
+    <div class="color"><span>number</span></div>
+    <div class="color"><span>algebra</span></div>
+    <div class="color"><span>geometry</span></div>
+    <div class="color"><span>sdf</span></div>
+    <div class="color"><span>E76F51</span></div>
+  </div>
+  <div id="stats">
+   
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+      <path d="M4 7.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5S5.5 9.83 5.5 9 4.83 7.5 4 7.5zm10 0c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zm-5 0c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5S9.83 7.5 9 7.5z"></path>
+    </svg>
+  </div>
+</div> -->
+
+
+
+
+
+</head>
+<body>
+    <h1>Maths </h1>
+    
+    <div class="cards">
+        <div class="card red">
+            <p class="tip">Number</p>
+            <p class="second-text"></p>
+        </div>
+        <div class="card blue">
+            <p class="tip">Algebra</p>
+            <p class="second-text"></p>
+        </div>
+        <div class="card green">
+            <p class="tip">Graphs</p>
+            <p class="second-text"></p>
+        </div>
+        <div class="card purple">
+          <p class="tip">ratio</p>
+          <p class="second-text"></p>
+      </div>
+
+      <div class="card purple">
+        <p class="tip">geometry</p>
+        <p class="second-text"></p>
+    </div>
+    <div class="card darkgreen">
+      <p class="tip">Trigonometry</p>
+      <p class="second-text"></p>
+  </div>
+  <div class="card darkblue">
+    <p class="tip">Probabaility</p>
+    <p class="second-text"></p>
+</div>
+<div class="card pink ">
+  <p class="tip">Statistic</p>
+  <p class="second-text"></p>
+</div>
+
+        <style>
+          .cards {
+            position: absolute;
+            top: 100px; /* Distance from the top */
+             
+          }
+        </style>
+    </div>
+
+<body>
+
+<div class="mathscountdown" id="countdown">
+  Loading...
+</div>
+
+<script>
+  // JavaScript for Countdown Timer
+
+  // Set the target date and time to 7 May 2025
+  const targetDate = new Date("May 7, 2025 00:00:00").getTime();
+
+  // Update the countdown every 1 second
+  const interval = setInterval(() => {
+      const now = new Date().getTime(); // Current time
+      const timeLeft = targetDate - now; // Time remaining
+
+      // Calculate days, hours, minutes, and seconds
+      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+      // Display the countdown
+      document.getElementById("countdown").innerHTML = `
+          ${days}d ${hours}h ${minutes}m ${seconds}s
+      `;
+
+      // If the countdown is over
+      if (timeLeft < 0) {
+          clearInterval(interval); // Stop the interval
+          document.getElementById("countdown").innerHTML = "🎉 Time's Up! 🎉";
+      }
+  }, 1000);
+</script>
+
+
+<div> 
+  <h1> countdown to first exam </h1>
+  </div>
+<style>
+  body
+.h1 {
+position: absolute;
+            top: 55px; /* Position title at the top */
+            width: 100%; /* Make it span the page width */
+            text-align: left; /* Center the title text */
+            margin: 0; /* Remove default margin */
+            
+          }
+
+
+        </style>
+ 
