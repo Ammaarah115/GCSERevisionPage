@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="english.css">
+    <style>
+        body {
+            background: linear-gradient(to right, #000000, #8f736b); /* Background gradient */
+            height: 100vh; /* Full-screen height */
+            margin: 0; /* Remove default body margin */
+            display: flex; /* Flexbox layout */
+            justify-content: center; /* Center button horizontally */
+            align-items: center; /* Center button vertically */
+            font-family: Arial, sans-serif; /* Font style */
+            color: white; /* Text color */
+            position: relative; /* Position child elements absolutely */
+        }
+
+        h1 {
+            position: absolute;
+            top: 20px; /* Position title at the top */
+            width: 100%; /* Make it span the page width */
+            text-align: center; /* Center the title text */
+            margin: 0; /* Remove default margin */
+            
+        }
+
+        h2 {
+            position: absolute;
+            top: 55px; /* Position title at the top */
+            width: 100%; /* Make it span the page width */
+            text-align: left; /* Center the title text */
+            margin: 0; /* Remove default margin */
+        }
+       
+
+        .button-container {
+            display: flex;
+            flex-direction: row;
+            gap: 7px; /* Space between buttons */
+        }
+
+
+        h3 {
+            position: absolute;
+            top: 250px; /* Position title at the top */
+            width: 100%; /* Make it span the page width */
+            text-align: left; /* Center the title text */
+            margin: 0; /* Remove default margin */
+        }
+
+        
+       
+
+
+      
+        
+    </style>
+</head>
+
+<title>Countdown Timer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #651313, #8f736b);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+            margin: 0;
+
+        }
+
+        .countdown {
+            font-size: 2rem;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px 40px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: 40%; /* Vertically align */
+            left: 20px; /* Position on the left-hand side */
+            transform: translateY(-50%); /* Adjust for vertical centering */
+
+
+        }
+        .countdown2 {
+            font-size: 2rem;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px 40px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: 90%; /* Vertically align */
+            left: 20px; /* Position on the left-hand side */
+            transform: translateY(-50%); /* Adjust for vertical centering */
+
+        }
+        
+        
+    </style>
+<body>
+    <h1>English</h1>
+    <div class="button-container">
+    
+        <form action="https://www.savemyexams.com/gcse/english-literature/aqa/17/revision-notes/1-shakespeare/macbeth/macbeth-themes/" method="get">
+            <button type="submit">
+        <span class="text">Macbeth</span>
+        <span class="blob"></span>
+        <span class="blob"></span>
+        <span class="blob"></span>
+        <span class="blob"></span>
+    </button>
+    </form>
+
+
+    <form action="https://revisionworld.com/a2-level-level-revision/english-literature-gcse-level/mice-and-men-john-steinbeck" method="get">
+        <button type="submit">
+    <span class="text">of mice and men</span>
+    <span class="blob"></span>
+    <span class="blob"></span>
+    <span class="blob"></span>
+    <span class="blob"></span>
+</button>
+
+
+
+<form action="https://revisionworld.com/a2-level-level-revision/english-literature-gcse-level/mice-and-men-john-steinbeck" method="get">
+    <button type="submit">
+<span class="text">inspector calls </span>
+<span class="blob"></span>
+<span class="blob"></span>
+<span class="blob"></span>
+<span class="blob"></span>
+</button>
+</form>
+
+
+  </div>
+  
+    
+
+
+<body>
+
+
+
+
+
+
+
+  
+    
+  <h2 id = "countdown1">Countdown to first English exam</h2>
+  <div class="countdown" id="countdown">
+      Loading...
+  </div>
+
+  <script>
+      // JavaScript for Countdown Timer
+
+      // Set the target date and time to 7 May 2025
+      const targetDate = new Date("May 7, 2025 00:00:00").getTime();
+
+      // Update the countdown every 1 second
+      const interval = setInterval(() => {
+          const now = new Date().getTime(); // Current time
+          const timeLeft = targetDate - now; // Time remaining
+
+          // Calculate days, hours, minutes, and seconds
+          const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+          // Display the countdown
+          document.getElementById("countdown").innerHTML = `
+              ${days}d ${hours}h ${minutes}m ${seconds}s
+          `;
+
+          // If the countdown is over
+          if (timeLeft < 0) {
+              clearInterval(interval); // Stop the interval
+              document.getElementById("countdown").innerHTML = "🎉 Time's Up! 🎉";
+          }
+      }, 1000);
+
+
+
+      
+  </script>
+  
+  
+  
+  <h3 id = " second timer">Countdown to second English exam</h3>
+  <div class="countdown2" id="countdown2">
+      Loading...
+  </div>
+
+  <script>
+    
+ // Countdown 2 - Second English Exam (15 May 2025)
+       const targetDate2 = new Date("May 15, 2025 00:00:00").getTime();
+        const interval2 = setInterval(() => {
+            const now = new Date().getTime();
+            const timeLeft2 = targetDate2 - now;
+
+            const days = Math.floor(timeLeft2 / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft2 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft2 % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft2 % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown2").innerHTML = `
+                ${days}d ${hours}h ${minutes}m ${seconds}s
+            `;
+
+            if (timeLeft2 < 0) {
+                clearInterval(interval2);
+                document.getElementById("countdown2").innerHTML = "🎉 Time's Up! 🎉";
+            }
+        }, 1000);
+
+    </script>
+
+
+
+
+<style>
+    .absolute-image {
+      position: absolute;
+      top: 500px; /* Distance from the top */
+      left: 60px; /* Distance from the left */
+    }
+  </style>
+
+ 
+ <a href="https://www.aqa.org.uk/find-past-papers-and-mark-schemes" target="_blank">
+    <img src="https://www.revisechemistry.uk/assets/img/AQA-GCSE.png?h=588b5ba2aa6a242354748ab9a3bb2401" class="absolute-image" width="200"/>
+  </a>
+
+  
+  <div class="card">
+    <div class="first-content">
+      <span>paper1</span>
+    </div>
+    
+    
+    
+    <div class="second-content">
+  <span>Timing - 1hr 45 mins section A - 40 Marks Section B - 40 Marks 5 Quetsion in total </span>
+    </div>
+  
+  
+  </div>
+
+  <style>
+.card {
+      position: absolute;
+      top: 300px; /* Distance from the top */
+      left: 450px; /* Distance from the left */
+
+}
+  </style>
+  
+
+
+
+
+
+
+
+  <div class="card2">
+    <div class="first-content">
+      <span>paper2</span>
+    </div>
+    
+    
+    
+    <div class="second-content">
+  <span>Timing - 1hr 45 mins section A - 40 Marks Section B - 40 Marks</span>
+    </div>
+  
+  
+  </div>
+
+  <style>
+.card2 {
+      position: absolute;
+      top: 300px; /* Distance from the top */
+      left:700px; /* Distance from the left */
+
+}
+  </style>
+  
+
+
+
+
+
+
+
+
+  
+</body>
+</html>
