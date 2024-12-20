@@ -293,3 +293,40 @@ h1 {
     transform: rotate(360deg);
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  body {
+      flex-direction: column; /* Stack content vertically */
+      align-items: center; /* Center content */
+  }
+
+  .e-card, .e-card2, .e-card3 {
+      width: 100px;
+      height: 100px;
+      margin: 10px 0;
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .e-card, .e-card2, .e-card3 {
+      width: 80px;
+      height: 80px;
+      font-size: 12px;
+  }
+
+  h1 {
+      font-size: 20px;
+  }
+}
